@@ -107,8 +107,6 @@ To ensure the Python program runs correctly, you need to:
    - PrettyTable
 2) In line 8 of the file, input the appropriate server details where you have loaded the database (which you can load directly after first creating a database named `airline` and using the Restore function in pgAdmin4 - you will find the `airlineDBRestore.sql` file that sets up the database for the exercise).
 
--------------------------------------
-
 ## Contributors
 
 <table>
