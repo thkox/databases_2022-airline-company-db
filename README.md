@@ -35,7 +35,7 @@ AS b ON t.ticket_no = b.ticket_no) INNER JOIN flight AS f ON b.departure_date = 
 booking AS bk ON f.departure_date = bk.departure_date WHERE f.flight_code = 'PG0878' AND seat_no = '52V'
 AND f.departure_date= CURRENT_DATE - INTERVAL '1 DAY';
 ```
-![Alt text](./images/2a.png)
+![2a](./images/2a.png)
 
 ### 2b Query: How many seats remained available on the aforementioned flight?
 
@@ -49,7 +49,7 @@ fl.flight_code = 'PG6590' AND fl.departure_date = CURRENT_DATE - INTERVAL '1 DAY
 ts.total_seats_no AS total_aircraft_seats, bs.booked_seats_no AS total_booked_seats, (ts.total_seats_no -
 bs.booked_seats_no) AS free_seats FROM ts, bs;
 ```
-![Alt text](./images/2b.png)
+![2b](./images/2b.png)
 
 ### 2c Query: Which flights had the greatest delays in 2022? Display the list of the top 5.
 
@@ -58,7 +58,7 @@ SELECT flight_code, departure_date, actual_departure_time - scheduled_departure_
 WHERE departure_date >= '2022-01-01' and departure_date <= '2022-12-31' AND flight_status = 'Arrived' ORDER
 BY delay DESC LIMIT 5;
 ```
-![Alt text](./images/2c.png)
+![2c](./images/2c.png)
 
 ### 2d Query: Find the top 5 frequent travelers in 2022, i.e., those who traveled the most kilometers.
 
@@ -70,7 +70,7 @@ passenger AS pa ON pa.passenger_id = ti.passenger_id WHERE flight_status = 'Arri
 '2022-01-01' AND f.departure_date <= '2022-12-31') GROUP BY pa.passenger_id ORDER BY SUM(f.distance)
 DESC LIMIT 5;
 ```
-![Alt text](./images/2d.png)
+![2d](./images/2d.png)
 
 ### 2e Query: Find the top 5 most popular destinations in 2022, i.e., the cities to which the most passengers traveled.
 
@@ -80,7 +80,7 @@ f.arrival_airport = a.airport_code INNER JOIN city AS c ON a.airport_city_name =
 f.flight_status = 'Arrived' AND (f.departure_date >= '2022-01-01' AND f.departure_date <= '2022-12-31') GROUP
 BY city_name ORDER BY COUNT(f.arrival_airport) DESC LIMIT 5;
 ```
-![Alt text](./images/2e.png)
+![2e](./images/2e.png)
 
 ### 2f Query: Find the "quickest" passengers, i.e., those who checked in first for all their flights. Consider only passengers who took at least two flights.
 
@@ -94,9 +94,7 @@ flight_status != 'Scheduled' GROUP BY pa.passenger_id)
 
 SELECT passenger_id, firstname, lastname FROM fp WHERE times >= 2 ORDER BY times DESC LIMIT 5;
 ```
-![Alt text](./images/2f.png)
-
-
+![2f](./images/2f.png)
 
 ## Setup Instructions
 
