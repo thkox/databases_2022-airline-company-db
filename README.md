@@ -4,9 +4,8 @@
 This project is a team assignment for the "Databases" course, offered in the 4th semester of the 2022 academic year at the University of Piraeus, Department of Informatics. The project focuses on designing, implementing, and querying a database for an airline company. The database includes entities such as bookings, tickets, flights, airports, aircrafts, and boarding passes. The tasks involve designing the relational schema, normalizing the database, creating views, executing complex queries, implementing triggers and cursors, and connecting the database with an application via API.
 
 ## Course Information
-
-- **Institution:** University of Piraeus
-- **Department:** Department of Informatics
+- **Institution:** [University of Piraeus](https://www.unipi.gr/en/)
+- **Department:** [Department of Informatics](https://cs.unipi.gr/en/)
 - **Course:** Databases (2022)
 - **Semester:** 4th
 
